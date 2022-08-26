@@ -87,7 +87,13 @@ class MainMenuState extends MusicBeatState
 		add(camFollow);
 		add(camFollowPos);
 
-		magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuDesat'));
+                var bgScroll:F1xBackdrop new F1xBackdrop (Paths.Image('mainmenu/maintd"), 5, 5, true, true, 0, 0);
+                bgScroll.scrollFactor.set();
+		bgScroll.screenCenter();
+                bgscroll.velocity.set(50, 50);
+                add(bgScroll);
+                
+                magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuDesat'));
 		magenta.scrollFactor.set(0, yScroll);
 		magenta.setGraphicSize(Std.int(magenta.width * 1.175));
 		magenta.updateHitbox();
@@ -273,7 +279,7 @@ class MainMenuState extends MusicBeatState
 
 		menuItems.forEach(function(spr:FlxSprite)
 		{
-			spr.screenCenter(X);
+			spr.x = 250;
 		});
 	}
 
