@@ -279,7 +279,7 @@ class MainMenuState extends MusicBeatState
 
 		menuItems.forEach(function(spr:FlxSprite)
 		{
-			spr.x = 250;
+			
 		});
 	}
 
