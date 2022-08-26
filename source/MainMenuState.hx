@@ -119,7 +119,8 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
 			//menuItem.screenCenter(X);
-			menuItems.add(menuItem);
+			menuItem.x = 250;
+                        menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if(optionShit.length < 6) scr = 0;
 			menuItem.scrollFactor.set(0, scr);
@@ -274,7 +275,8 @@ class MainMenuState extends MusicBeatState
 		menuItems.forEach(function(spr:FlxSprite)
 		{
 			//spr.screenCenter(X);
-		});
+		        spr.x = 250;
+                });
 	}
 
 	function changeItem(huh:Int = 0)
