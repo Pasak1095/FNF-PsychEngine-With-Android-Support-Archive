@@ -86,13 +86,7 @@ class MainMenuState extends MusicBeatState
 		camFollowPos = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
 		add(camFollowPos);
-
-                var bgScroll:F1xBackdrop new F1xBackdrop (Paths.Image('mainmenu/maintd"), 5, 5, true, true, 0, 0);
-                bgScroll.scrollFactor.set();
-		bgScroll.screenCenter();
-                bgscroll.velocity.set(50, 50);
-                add(bgScroll);
-                
+                               
                 magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuDesat'));
 		magenta.scrollFactor.set(0, yScroll);
 		magenta.setGraphicSize(Std.int(magenta.width * 1.175));
@@ -124,7 +118,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
-			menuItem.screenCenter('X');
+			menuItem.screenCenter(X);
 			menuItem.x = 250;
                         menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
@@ -280,7 +274,7 @@ class MainMenuState extends MusicBeatState
 
 		menuItems.forEach(function(spr:FlxSprite)
 		{
-		  spr.screencenter('X');	
+		  spr.screencenter(X);	
 		  spr.x = 250;
                 });
 	}
