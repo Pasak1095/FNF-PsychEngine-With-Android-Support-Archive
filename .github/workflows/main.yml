@@ -143,8 +143,8 @@ jobs:
         uses: actions/upload-artifact@v2.2.4
         with:
           name: androidBuild
-          path: export/release/windows/bin
-  buildMac:
+          path: export/release/Android/bin
+  BuildAndroid:
     runs-on: macos-latest
 
     steps:
